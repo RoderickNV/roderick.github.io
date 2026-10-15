@@ -332,25 +332,109 @@
 
         /* Adventures Section */
         .adventures-section {
-            padding: 8rem 5%;
+            padding: 0 0 8rem;
             background: var(--fog-gray);
         }
 
-        .blog-grid {
-            max-width: 1400px;
+        /* Blog title banner */
+        .blog-header {
+            background: linear-gradient(135deg, #0D1B2A 0%, #1B3A52 50%, #2A5470 100%);
+            padding: 7rem 5% 6rem;
+            margin-bottom: 5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 6px solid var(--horizon-orange);
+        }
+
+        .blog-header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 15% 30%, rgba(10, 122, 255, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 85% 70%, rgba(255, 107, 53, 0.14) 0%, transparent 45%);
+            pointer-events: none;
+        }
+
+        .blog-header-inner {
+            position: relative;
+            max-width: 800px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-            gap: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .blog-header .label {
+            display: inline-block;
+            color: var(--horizon-orange);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            padding: 0.4rem 1rem;
+            border: 1px solid rgba(255, 107, 53, 0.5);
+            border-radius: 999px;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-header h2 {
+            font-family: 'Fraunces', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+        }
+
+        .blog-header-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.75rem auto;
+            color: var(--horizon-orange);
+        }
+
+        .blog-header-divider::before,
+        .blog-header-divider::after {
+            content: '';
+            width: 90px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        .blog-header p {
+            font-size: 1.2rem;
+            color: var(--fog-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Blog posts */
+        .blog-list {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 5%;
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
         }
 
         .blog-card {
             background: white;
             border-radius: 12px;
             overflow: hidden;
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            border: 1px solid rgba(13, 27, 42, 0.12);
+            border-left: 8px solid var(--sky-blue);
             transition: all 0.3s;
-            box-shadow: 0 4px 20px rgba(13, 27, 42, 0.08);
+            box-shadow: 0 8px 30px rgba(13, 27, 42, 0.12);
             animation: fadeInUp 0.8s ease-out;
+        }
+
+        .blog-card:nth-child(even) {
+            border-left-color: var(--horizon-orange);
         }
 
         .blog-card:nth-child(1) { animation-delay: 0.1s; }
@@ -358,13 +442,13 @@
         .blog-card:nth-child(3) { animation-delay: 0.3s; }
 
         .blog-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(13, 27, 42, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(13, 27, 42, 0.18);
         }
 
         .blog-image {
             width: 100%;
-            height: 250px;
+            min-height: 260px;
             background: linear-gradient(135deg, var(--sky-blue) 0%, var(--horizon-orange) 100%);
             display: flex;
             align-items: center;
@@ -374,7 +458,28 @@
         }
 
         .blog-content {
-            padding: 2rem;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-entry {
+            background: var(--deep-navy);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
         }
 
         .blog-date {
@@ -383,7 +488,6 @@
             font-weight: 600;
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            margin-bottom: 0.75rem;
         }
 
         .blog-card h3 {
@@ -492,8 +596,29 @@
                 font-size: 2.5rem;
             }
 
-            .work-grid, .blog-grid {
+            .work-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .blog-header {
+                padding: 5rem 5% 4rem;
+                margin-bottom: 3.5rem;
+            }
+
+            .blog-header h2 {
+                font-size: 3.25rem;
+            }
+
+            .blog-card {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-image {
+                min-height: 200px;
+            }
+
+            .blog-content {
+                padding: 2rem;
             }
 
             .cta-buttons {
@@ -579,16 +704,26 @@
     </section>
 
     <section id="adventures" class="adventures-section">
-        <div class="section-header">
-            <div class="label">Aviation & Adventure</div>
-            <h2>Flight Log</h2>
-            <p>Stories from the cockpit, adventures above the clouds, and the journey of becoming a pilot.</p>
+        <div class="blog-header">
+            <div class="blog-header-inner">
+                <div class="label">Aviation & Adventure</div>
+                <h2>Flight Log</h2>
+                <div class="blog-header-divider" aria-hidden="true">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"></path>
+                    </svg>
+                </div>
+                <p>Stories from the cockpit, adventures above the clouds, and the journey of becoming a pilot.</p>
+            </div>
         </div>
-        <div class="blog-grid">
+        <div class="blog-list">
             <article class="blog-card">
                 <div class="blog-image">Adventure Photo Here</div>
                 <div class="blog-content">
-                    <div class="blog-date">Jan 15, 2026</div>
+                    <div class="blog-meta">
+                        <span class="blog-entry">Entry 03</span>
+                        <span class="blog-date">Jan 15, 2026</span>
+                    </div>
                     <h3>First Solo Cross-Country</h3>
                     <p>The story of my first solo cross-country flight, navigating weather challenges and the incredible feeling of independence in the air.</p>
                     <a href="#" class="read-more">Read Story →</a>
@@ -597,7 +732,10 @@
             <article class="blog-card">
                 <div class="blog-image">Adventure Photo Here</div>
                 <div class="blog-content">
-                    <div class="blog-date">Dec 22, 2025</div>
+                    <div class="blog-meta">
+                        <span class="blog-entry">Entry 02</span>
+                        <span class="blog-date">Dec 22, 2025</span>
+                    </div>
                     <h3>Sunset Flight Over the Coast</h3>
                     <p>An unforgettable evening flight along the coastline, capturing the perfect golden hour from 3,000 feet above sea level.</p>
                     <a href="#" class="read-more">Read Story →</a>
@@ -606,7 +744,10 @@
             <article class="blog-card">
                 <div class="blog-image">Adventure Photo Here</div>
                 <div class="blog-content">
-                    <div class="blog-date">Nov 30, 2025</div>
+                    <div class="blog-meta">
+                        <span class="blog-entry">Entry 01</span>
+                        <span class="blog-date">Nov 30, 2025</span>
+                    </div>
                     <h3>Earning My Private Pilot License</h3>
                     <p>The culmination of months of training, studying, and dedication. Reflections on the journey to earning my wings.</p>
                     <a href="#" class="read-more">Read Story →</a>

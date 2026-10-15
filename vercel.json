@@ -1,4 +1,6 @@
 {
+  "buildCommand": "node tools/deploy-build.js && rm -rf tools",
+  "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [

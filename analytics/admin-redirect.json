@@ -1,0 +1,11 @@
+{
+  "source": "/:path*",
+  "has": [
+    {
+      "type": "host",
+      "value": "admin.robertroderick.com"
+    }
+  ],
+  "destination": "https://vercel.com/rob-9799s-projects/robertroderick/analytics",
+  "permanent": false
+}

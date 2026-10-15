@@ -1,0 +1,29 @@
+<!--
+  Vercel Web Analytics for robertroderick.com
+  Paste this just before </body> in the page template that build.js uses,
+  so every page gets it.
+-->
+
+<!-- 1. Page views and visitors -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
+<!-- 2. Link clicks (shows under "Events" in Vercel; custom events need the Pro plan) -->
+<script>
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest && e.target.closest("a[href]");
+    if (!link) return;
+    var url = new URL(link.href, location.href);
+    var internal = url.host === location.host;
+    window.va("event", {
+      name: internal ? "Internal Link Click" : "Outbound Link Click",
+      data: {
+        to: internal ? url.pathname : url.host + url.pathname,
+        from: location.pathname,
+        text: (link.textContent || "").trim().slice(0, 60)
+      }
+    });
+  });
+</script>

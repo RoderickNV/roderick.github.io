@@ -258,7 +258,25 @@ strong { color: var(--white); font-weight: 700; }
 .card p { margin: 0; }
 
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); }
-h2.inner { display: block; }
+/* The Pictures heading sits outside an .inner wrapper (the photo grid under it is full width),
+   so it carries .inner itself. Restore the heading's own top margin and padding, which .inner's
+   "margin: 0 auto; padding: 0 var(--pad)" would otherwise wipe out, and draw the divider line
+   inside the side padding so it lines up with the other section lines. */
+h2.inner {
+  display: block;
+  position: relative;
+  margin: clamp(50px, 7vw, 90px) auto 26px;
+  padding: 34px var(--pad) 0;
+  border-top: 0;
+}
+h2.inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: var(--pad);
+  right: var(--pad);
+  border-top: 1px solid var(--line);
+}
 #pictures { margin-bottom: clamp(24px, 4vw, 40px); }
 .tile { position: relative; aspect-ratio: 1; margin: 0; overflow: hidden; background: rgba(255, 255, 255, 0.05); }
 .tile img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.4s; }

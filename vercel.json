@@ -5,6 +5,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/admin",
+      "destination": "https://vercel.com/rob-9799s-projects/robertroderick/analytics",
+      "permanent": false
+    },
+    {
       "source": "/:path*",
       "has": [
         {

@@ -21,5 +21,11 @@ and removes itself from the output. So a deployment made from these files is com
 A change made here still has to be copied into the site folder on Rob's computer, or the
 next `vercel --prod` from there will publish the older version again.
 
+Analytics: every page ends with the Vercel Web Analytics snippet in
+`tools/analytics-snippet.html` (page views, plus link-click events on the Pro plan). The
+build step adds it to any page that lacks it. `admin.robertroderick.com` forwards to the
+analytics dashboard (a rule in `vercel.json`); it needs a CNAME record `admin` pointing to
+`cname.vercel-dns.com` where the domain's DNS is managed.
+
 `Roderick site.html`, `Roderick.github.io.html` and `roderick.github.io.html` are an older
 test page and are not part of the live site.

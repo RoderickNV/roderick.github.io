@@ -1,0 +1,7 @@
+# Local-only working files; not part of the public site
+photos.html
+serve.py
+build.js
+render.js
+assets/content.js
+/posts/

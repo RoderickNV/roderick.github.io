@@ -1,0 +1,20 @@
+# Live pages to copy from robertroderick.com at build time, with the SHA-1 of each file in
+# the production deployment they come from (dpl_4N2CDoKtfxkS8gFEdBQeyJSNM6E7, Oct 30, 2026).
+# Refresh the hashes (Vercel → deployment → Source, or the Vercel API file list) before the next deploy.
+404.html 2d26e929bf52b590fb4e2fa4cd5ac2cb45fa7cf6
+about.html 40141475000060e99958d00d77b64cc0831fcc99
+assets/main.js 16a7754cd3a028ddb01fefac9e2b2689d5958ad3
+assets/styles.css 17976b29637d27c167de79e8b936ff53c2c7a277
+blog/2026-fantasy-football-update-for-my-loser-friends.html e5bcbb0f7e98b007b748020339d577d054a20711
+blog/2026-fantasy-football-update-week-7.html 72940e9cde977b813ca5a72d51b4f585298a9b78
+blog/hello-from-lake-tahoe.html 096e3a80e65bf52c48981c3358d98d6799203dad
+blog/index.html 05a67216b6dba6f69cc8de5627caec7e538b9e2e
+contact.html 9f96a91dd7ccb7446d4747c04d448b4d43f2f774
+favicon.svg 41f0a0c922c2ead89526be29a448eef99d5735ee
+feed.xml bbaa5c7acf003af4bbadac2c2d86b47409edc16a
+index.html 1040323018fa35a3158ca810a7377b9af7548366
+life.html 60100332794d41a4d841cab6ebd486bb92041ad8
+robots.txt c44bc2616c4d55fe946e8106234306354fac3d71
+site.webmanifest 3995e7c5ca4aea1cfb2ab05edcd354cd844540c8
+sitemap.xml 8df4368b1ce0dfa3c9e540fd6ad012dbf62cf8e9
+work.html 897487d6a3494a628d0338a2c6809625b2dcb7d3

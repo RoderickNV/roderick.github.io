@@ -166,8 +166,9 @@ in Las Vegas, a Muzi Chevrolet sales consultant, several obituaries, and an old 
   now copies the live pages from robertroderick.com first (`tools/live-pages.txt`, each checked against the
   SHA-1 Vercel reports, so a repo deploy can't overwrite newer pages) and then applies the fix (`FIXES` in
   `tools/deploy-build.js`).
-- **Still to do on Rob's computer:** set this video's displayed date to 2017-06-27 in the site folder
-  (`assets/content.js`), or the next `vercel --prod` from there will show October 30, 2026 again.
+- **Done Oct 30 on Rob's computer:** the site folder now has `recorded: "2017-06-27"` on this video in
+  `assets/content.js`; `render.js` shows `recorded` when set and `build.js` adds it as `dateCreated`, so the next
+  `vercel --prod` from the folder keeps the hearing date.
 
 **Last session: October 15, 2026**
 - Wrote this context doc and the engineering doc.

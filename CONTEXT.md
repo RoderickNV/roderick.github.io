@@ -157,6 +157,19 @@ in Las Vegas, a Muzi Chevrolet sales consultant, several obituaries, and an old 
 
 ## 9. Where we left off (update this every session)
 
+**October 30, 2026 (cloud session, from Rob's phone)**
+- `/life`: the NYC City Council testimony video (TurboTax Benefit Assist, YouTube `A0NGvuHRIMs`) showed its
+  YouTube upload date, **October 30, 2026**. It now shows the day of the hearing, **June 27, 2017** (on the
+  video's caption bar: NYC Council Committee on General Welfare, 06/27/2017). Structured data keeps
+  `uploadDate` 2026-10-30 and adds `dateCreated` 2017-06-27.
+- Deployed from this repo (branch `claude/seo-ranking-cash-balancer-rgbp1v`) through the Vercel API. The build
+  now copies the live pages from robertroderick.com first (`tools/live-pages.txt`, each checked against the
+  SHA-1 Vercel reports, so a repo deploy can't overwrite newer pages) and then applies the fix (`FIXES` in
+  `tools/deploy-build.js`).
+- **Done Oct 30 on Rob's computer:** the site folder now has `recorded: "2017-06-27"` on this video in
+  `assets/content.js`; `render.js` shows `recorded` when set and `build.js` adds it as `dateCreated`, so the next
+  `vercel --prod` from the folder keeps the hearing date.
+
 **Last session: October 15, 2026**
 - Wrote this context doc and the engineering doc.
 - Found that the site's **source files are not in GitHub**. The build script, blog post sources and content

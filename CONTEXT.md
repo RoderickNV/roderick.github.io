@@ -178,8 +178,9 @@ in Las Vegas, a Muzi Chevrolet sales consultant, several obituaries, and an old 
   of 200 blog posts, corrected 2026 contribution limits, accessible text colors. Details are in that repo's
   `docs/website.md`.
 - Confirmed cashbalancer.com links back to this site (to-do in §6 ticked).
-- Rob keeps rob@robertroderick.com as Cash Balancer's public contact for now. A free option: add cashbalancer.com
-  as a Google Workspace alias domain, then add a support@cashbalancer.com alias to his user.
+- Cash Balancer's public contact is support@cashbalancer.com again (2026-11-15, Cash Balancer PR #68). cashbalancer.com
+  is a user alias domain on the robertroderick.com Google Workspace, so mail lands in rob@robertroderick.com's inbox
+  with no second Workspace bill. The old standalone Cash Balancer Google account that held the domain was deleted.
 
 **October 30, 2026 (cloud session, from Rob's phone)**
 - `/life`: the NYC City Council testimony video (TurboTax Benefit Assist, YouTube `A0NGvuHRIMs`) showed its

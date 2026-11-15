@@ -126,7 +126,7 @@ in Las Vegas, a Muzi Chevrolet sales consultant, several obituaries, and an old 
 - [ ] Use "URL Inspection → Request indexing" for `/`, `/about`, `/work`.
 - [ ] Turn on **Vercel Web Analytics** (currently off) to see visitors and which ones came from Google.
 - [ ] Make sure LinkedIn, GitHub, Instagram and YouTube all link *back* to robertroderick.com (helps Google connect them).
-- [ ] Ask cashbalancer.com to link to robertroderick.com (for example, "Built by Rob Roderick" in its footer or about page).
+- [x] Ask cashbalancer.com to link to robertroderick.com. Done: its /about "Meet the Founder" section and Organization `founder` schema link here (confirmed Nov 15, 2026).
 - [ ] Publish a few more real posts (one or two a month is plenty).
 - [ ] Decide whether `/contact` should be in the menu and sitemap, or removed.
 
@@ -156,6 +156,15 @@ in Las Vegas, a Muzi Chevrolet sales consultant, several obituaries, and an old 
 ---
 
 ## 9. Where we left off (update this every session)
+
+**November 15, 2026 (cloud session): Cash Balancer audit, no changes to robertroderick.com**
+- Audited cashbalancer.com end to end (security, SEO, performance, images, copy) and shipped the fixes in
+  the `RoderickNV/cash-balancer` repo (PR #66): package updates, branded 404, paginated blog, 2027 refresh
+  of 200 blog posts, corrected 2026 contribution limits, accessible text colors. Details are in that repo's
+  `docs/website.md`.
+- Confirmed cashbalancer.com links back to this site (to-do in §6 ticked).
+- Rob keeps rob@robertroderick.com as Cash Balancer's public contact for now. A free option: add cashbalancer.com
+  as a Google Workspace alias domain, then add a support@cashbalancer.com alias to his user.
 
 **October 30, 2026 (cloud session, from Rob's phone)**
 - `/life`: the NYC City Council testimony video (TurboTax Benefit Assist, YouTube `A0NGvuHRIMs`) showed its

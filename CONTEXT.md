@@ -59,6 +59,16 @@ It is a small, fast, static site (plain HTML pages, no app or database), hosted 
 
 ---
 
+### Data accuracy rule (Rob, Nov 15, 2026: "we need to be 100% correct")
+Applies to this site **and** cashbalancer.com (where it's CLAUDE.md rules 23–25).
+- **Every figure is verified at the official source and linked.** Tax/IRS limits, Social Security, rates,
+  laws, statistics: Claude checks the official page (irs.gov, ssa.gov, bls.gov, federalreserve.gov,
+  consumerfinance.gov, congress.gov, ftc.gov, or the original study) in the same session, never from memory,
+  and links it right next to the figure. If the source can't be reached, the figure doesn't go live.
+- **Year labels follow the data.** In a new year with no new figures yet, say e.g. "2027 (based on 2026 IRS
+  limits, link)". Never relabel an old figure as the new year's.
+- **Always link sources**, and treat this as a pre-production check: no page goes live with an unlinked figure.
+
 ## 4. Pages on the site
 
 | URL | Purpose | Notes |
@@ -126,7 +136,7 @@ in Las Vegas, a Muzi Chevrolet sales consultant, several obituaries, and an old 
 - [ ] Use "URL Inspection → Request indexing" for `/`, `/about`, `/work`.
 - [ ] Turn on **Vercel Web Analytics** (currently off) to see visitors and which ones came from Google.
 - [ ] Make sure LinkedIn, GitHub, Instagram and YouTube all link *back* to robertroderick.com (helps Google connect them).
-- [ ] Ask cashbalancer.com to link to robertroderick.com (for example, "Built by Rob Roderick" in its footer or about page).
+- [x] Ask cashbalancer.com to link to robertroderick.com. Done: its /about "Meet the Founder" section and Organization `founder` schema link here (confirmed Nov 15, 2026).
 - [ ] Publish a few more real posts (one or two a month is plenty).
 - [ ] Decide whether `/contact` should be in the menu and sitemap, or removed.
 
@@ -156,6 +166,20 @@ in Las Vegas, a Muzi Chevrolet sales consultant, several obituaries, and an old 
 ---
 
 ## 9. Where we left off (update this every session)
+
+**November 15, 2026 (cloud session): Cash Balancer audit, no changes to robertroderick.com**
+- Rob set the data accuracy rule (§3). Cash Balancer PR #66 was held until its figures were verified, then
+  **merged and deployed the same afternoon**: every IRS figure was checked on irs.gov and linked, and 2027-aimed
+  posts use the IRS's published 2027 limits (IR-2026-136 / IR-2026-133). ssa.gov, congress.gov and ftc.gov block
+  automated checks, so facts that need them are checked in a real browser. Open items: `docs/checklist.md` in the
+  cash-balancer repo. A scheduled task fires **Jan 3, 2027, 10:00 AM Pacific** for the remaining 2026 → 2027 refresh.
+- Audited cashbalancer.com end to end (security, SEO, performance, images, copy) and shipped the fixes in
+  the `RoderickNV/cash-balancer` repo (PR #66): package updates, branded 404, paginated blog, 2027 refresh
+  of 200 blog posts, corrected 2026 contribution limits, accessible text colors. Details are in that repo's
+  `docs/website.md`.
+- Confirmed cashbalancer.com links back to this site (to-do in §6 ticked).
+- Rob keeps rob@robertroderick.com as Cash Balancer's public contact for now. A free option: add cashbalancer.com
+  as a Google Workspace alias domain, then add a support@cashbalancer.com alias to his user.
 
 **October 30, 2026 (cloud session, from Rob's phone)**
 - `/life`: the NYC City Council testimony video (TurboTax Benefit Assist, YouTube `A0NGvuHRIMs`) showed its

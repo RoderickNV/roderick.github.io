@@ -168,10 +168,11 @@ in Las Vegas, a Muzi Chevrolet sales consultant, several obituaries, and an old 
 ## 9. Where we left off (update this every session)
 
 **November 15, 2026 (cloud session): Cash Balancer audit, no changes to robertroderick.com**
-- Rob set the data accuracy rule (§3). Cash Balancer PR #66 is ON HOLD until its corrected 2026 IRS figures are
-  verified on irs.gov/ssa.gov and linked: the cloud session couldn't reach those sites. The full to-do list is
-  `docs/checklist.md` in the cash-balancer repo. A scheduled task fires **Jan 3, 2027, 10:00 AM Pacific** to
-  move both the copy and the figures from 2026 to 2027 under the same rule.
+- Rob set the data accuracy rule (§3). Cash Balancer PR #66 was held until its figures were verified, then
+  **merged and deployed the same afternoon**: every IRS figure was checked on irs.gov and linked, and 2027-aimed
+  posts use the IRS's published 2027 limits (IR-2026-136 / IR-2026-133). ssa.gov, congress.gov and ftc.gov block
+  automated checks, so facts that need them are checked in a real browser. Open items: `docs/checklist.md` in the
+  cash-balancer repo. A scheduled task fires **Jan 3, 2027, 10:00 AM Pacific** for the remaining 2026 → 2027 refresh.
 - Audited cashbalancer.com end to end (security, SEO, performance, images, copy) and shipped the fixes in
   the `RoderickNV/cash-balancer` repo (PR #66): package updates, branded 404, paginated blog, 2027 refresh
   of 200 blog posts, corrected 2026 contribution limits, accessible text colors. Details are in that repo's

@@ -313,6 +313,8 @@ This site should work the same way, so any computer or Claude session can pick i
 
 ## 11. After-deploy checks
 
+- [ ] **Before deploying:** every number on a changed page is verified on its official source and linked (CONTEXT.md §3, data accuracy rule).
+
 - [ ] Open `/`, `/work`, `/life`, `/about`, `/blog` and the newest post: all load, photos show, phone menu works.
 - [ ] `https://www.robertroderick.com/about` redirects to `https://robertroderick.com/about`.
 - [ ] View source on a changed page: correct `title`, `canonical`, `og:url`, and the `?v=` stamp changed if CSS/JS changed.

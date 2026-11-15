@@ -59,6 +59,16 @@ It is a small, fast, static site (plain HTML pages, no app or database), hosted 
 
 ---
 
+### Data accuracy rule (Rob, Nov 15, 2026: "we need to be 100% correct")
+Applies to this site **and** cashbalancer.com (where it's CLAUDE.md rules 23–25).
+- **Every figure is verified at the official source and linked.** Tax/IRS limits, Social Security, rates,
+  laws, statistics: Claude checks the official page (irs.gov, ssa.gov, bls.gov, federalreserve.gov,
+  consumerfinance.gov, congress.gov, ftc.gov, or the original study) in the same session, never from memory,
+  and links it right next to the figure. If the source can't be reached, the figure doesn't go live.
+- **Year labels follow the data.** In a new year with no new figures yet, say e.g. "2027 (based on 2026 IRS
+  limits, link)". Never relabel an old figure as the new year's.
+- **Always link sources**, and treat this as a pre-production check: no page goes live with an unlinked figure.
+
 ## 4. Pages on the site
 
 | URL | Purpose | Notes |
@@ -158,6 +168,10 @@ in Las Vegas, a Muzi Chevrolet sales consultant, several obituaries, and an old 
 ## 9. Where we left off (update this every session)
 
 **November 15, 2026 (cloud session): Cash Balancer audit, no changes to robertroderick.com**
+- Rob set the data accuracy rule (§3). Cash Balancer PR #66 is ON HOLD until its corrected 2026 IRS figures are
+  verified on irs.gov/ssa.gov and linked: the cloud session couldn't reach those sites. The full to-do list is
+  `docs/checklist.md` in the cash-balancer repo. A scheduled task fires **Jan 3, 2027, 10:00 AM Pacific** to
+  move both the copy and the figures from 2026 to 2027 under the same rule.
 - Audited cashbalancer.com end to end (security, SEO, performance, images, copy) and shipped the fixes in
   the `RoderickNV/cash-balancer` repo (PR #66): package updates, branded 404, paginated blog, 2027 refresh
   of 200 blog posts, corrected 2026 contribution limits, accessible text colors. Details are in that repo's
